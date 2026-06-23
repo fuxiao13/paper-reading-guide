@@ -1,0 +1,9 @@
+# Codex 应用元数据(可选)。字段以 developers.openai.com/codex/skills 当前规范为准;
+# 若某字段不被识别可删去,核心运行只依赖 SKILL.md。
+interface:
+  display_name: "论文陪读"
+  short_description: "陪读单篇论文,逐节讲解并生成精读小结"
+  default_prompt: "Use $paper-reading-guide to guide me through this paper section by section."
+
+policy:
+  allow_implicit_invocation: true
