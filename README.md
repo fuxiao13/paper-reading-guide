@@ -53,17 +53,50 @@ paper-reading-guide/
 ```
 
 ## 安装
-**Codex**(全局):
+
+### 方式一:git clone(推荐)
+
+**Codex 全局安装:**
 ```bash
+git clone https://github.com/fuxiao13/paper-reading-guide.git
 cp -R paper-reading-guide ~/.codex/skills/
+cd paper-reading-guide
 pip install -r requirements.txt   # 可选,给 scripts/ 用(PyMuPDF)
 ```
-**Claude Code**(全局):
+
+**Claude Code 全局安装:**
 ```bash
-cp -R paper-reading-guide ~/.claude/skills/   # 给 Claude Code 用时可删掉 agents/openai.yaml
+git clone https://github.com/fuxiao13/paper-reading-guide.git
+cp -R paper-reading-guide ~/.claude/skills/
+cd paper-reading-guide
+pip install -r requirements.txt
 ```
-项目内安装则放进仓库的 `.codex/skills/` 或 `.claude/skills/`。装完重启 agent,
-`/skills` 里能看到即成功。
+
+装完重启 agent,`/skills` 里能看到 `paper-reading-guide` 即成功。
+
+### 方式二:Download ZIP
+
+1. 在 GitHub 页面点击 **Code → Download ZIP**。
+2. 解压后文件夹通常叫 `paper-reading-guide-main`。
+3. 把它重命名为 `paper-reading-guide`。
+4. 复制到你的 skills 目录:
+
+```bash
+cp -R paper-reading-guide ~/.codex/skills/
+pip install -r paper-reading-guide/requirements.txt
+```
+
+Windows 用户可手动复制到:
+
+```text
+C:\Users\你的用户名\.codex\skills\paper-reading-guide
+```
+
+再运行:
+
+```powershell
+pip install -r "C:\Users\你的用户名\.codex\skills\paper-reading-guide\requirements.txt"
+```
 
 > 本仓库根目录是省 token 主版本。`full-version/` 是完整版归档,用于对照或手动安装;
 > 两者的 skill 名同为 `paper-reading-guide`,不要同时安装到同一个 skills 目录。
