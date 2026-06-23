@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+# 脚本运行产物 / 用户本地内容
+figures/
+notes/
+*.png
